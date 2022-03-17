@@ -33,76 +33,7 @@ async def hello(ctx):
 
 @bot.command()
 async def fuckyou(ctx):
-    await ctx.reply("Fuck you too, you piece of human garbage!")
-
-
-en = "Sivert sounds pretty retarded"
-to = "I heard Sivert is awesome!"
-tre = "Sivert, thats one sexy man"
-fire = "Never heard of a cooler dude"
-@bot.command()
-async def sivert(ctx):
-    await ctx.reply("hmmmm Sivert... let me think")
-    sleep(3)
-    tilfeldig = randint(1, 4)
-    if tilfeldig == 1:
-      await ctx.reply(en)
-    if tilfeldig == 2:
-      await ctx.reply(to)
-    if tilfeldig == 3:
-      await ctx.reply(tre)
-    if tilfeldig == 4:
-      await ctx.reply(fire)
-
-fjell1 = "Det var på tide" + " - William 2k22"
-
-@bot.command()
-async def secretwilliam(ctx):
-  await ctx.reply(fjell1)
-
-
-a1 = "Audun, never heard of him, But sounds like a llamas name too me"
-a2 = "I heard the Auduns were extinct!"
-a3 = "Audun who?"
-a4 = "I like that Audun guy"
-@bot.command()
-async def audun(ctx):
-    await ctx.reply("hmmmm Audun you say... give me a sec")
-    sleep(3)
-    tilfeldig = randint(1, 4)
-    if tilfeldig == 1:
-      await ctx.reply(a1)
-    if tilfeldig == 2:
-      await ctx.reply(a2)
-    if tilfeldig == 3:
-      await ctx.reply(a3)
-    if tilfeldig == 4:
-      await ctx.reply(a4)   
-
-
-c1 = "I dont know man"
-c2 = "I found this address: Nyborgveien 7. 3031 Drammen"
-c3 = "Famous quote 'GGEZ'"
-c4 = "Chris is trash in padletennis"
-@bot.command()
-async def chris(ctx):
-    await ctx.reply("Chris? hmmmmm")
-    sleep(3)
-    tilfeldig = randint(1, 4)
-    if tilfeldig == 1:
-      await ctx.reply(c1)
-    if tilfeldig == 2:
-      await ctx.reply(c2)
-    if tilfeldig == 3:
-      await ctx.reply(c3)
-    if tilfeldig == 4:
-      await ctx.reply(c4)      
-
-
-
-@bot.command()
-async def add(ctx, num1, num2):
-    await ctx.reply(float(num1)+float(num2))
+    await ctx.reply("Fuck you too, human!")
 
 
 @bot.command()
@@ -110,27 +41,7 @@ async def dice(ctx, dice):
     terning = randint(1, int(dice))
     await ctx.reply(str(terning))
 
-
-w1 = "William er en bøgis"
-w2 = "William, thats one fine young man!"
-w3 = "sounds like a stand up kinda guy"
-w4 = "Heard he goes by the nick 'zedzell', whatever that means"
-
-@bot.command()
-async def william(ctx):
-    await ctx.reply("hmmmm william william william... let me have a look")
-    sleep(3)
-    tilfeldig = randint(1, 4)
-    if tilfeldig == 1:
-      await ctx.reply(w1)
-    if tilfeldig == 2:
-      await ctx.reply(w2)
-    if tilfeldig == 3:
-      await ctx.reply(w3)
-    if tilfeldig == 4:
-      await ctx.reply(w4)  
-
-
+	
 @bot.command()
 async def teams(ctx, *names: str):
     navn = []
@@ -169,7 +80,10 @@ async def flip(ctx):
     else:
         await ctx.reply("Tails!")
 
-
+"""
+This one does not allow you to play leauge, EVER! 
+You´re Welcome
+"""
 @bot.command(description='For when you wanna settle the score some other way')
 async def choose(ctx, *choices: str):
     """Chooses between multiple choices."""
