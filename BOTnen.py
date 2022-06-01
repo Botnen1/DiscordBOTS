@@ -6,7 +6,39 @@ from time import sleep
 from webserver import keep_alive
 import os
 from tekst import *
+import youtube_dl
+from quotes import *
+import time
+import asyncio
+import requests
+from dotenv import load_dotenv
+import utilities
+
+
 bot = commands.Bot(command_prefix=".")
+
+
+      
+@bot.command()
+async def lol(ctx):
+  await ctx.reply("League of Legends suger")
+  await ctx.reply("League of Legends suger")
+  await ctx.reply("League of Legends suger")
+  await ctx.reply("League of Legends suger")
+  await ctx.reply("League of Legends suger")
+  await ctx.reply("League of Legends suger")
+  await ctx.reply("League of Legends suger")
+  
+  await ctx.message.delete()
+  
+
+@bot.command()
+async def databrus(ctx):
+  await ctx.reply("Forskning viser at voldsomme mengder databrus **faktisk er bra for deg!**\nKjøp det her..."+"\n\n"+"https://www.amazon.com/Monster-Energy-Drink-Green-Original/dp/B019AKA6YU?th=1")
+  await ctx.reply("....*sponsored by monster energy*")
+  await ctx.message.delete()
+  
+
 
 @bot.event
 async def on_ready():
@@ -16,14 +48,19 @@ async def on_ready():
 @bot.command()
 async def botnen(ctx):
     await ctx.reply("Hello\nLet me help you!\nThis is a list of my commands:")
-    await ctx.reply(".hello\n.sivert\n.audun\n.chris\n.william\n.teams - for making two random teams\n.add\n.dice\n.flip - flip a coin\n.choose - for choosing between games etc\n.ping")
+    await ctx.reply("\n.botnen\n.add\n.choose\n.dice\n.flip\n.hello\n.lol\n.teams\n.status\n.databrus\n.ping\n.fuckyou")
 
 
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="with myself", type=3)
+    activity = discord.Game(name="with siverts hair", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
+
+@bot.command()
+async def status(ctx):
+  await ctx.reply("Status:\nI am currently playing with Siverts hair, and i LOVE it")
+  await ctx.message.delete()
 
 
 @bot.command()
@@ -31,9 +68,12 @@ async def hello(ctx):
     await ctx.reply("Hello" + " " + "I'm "+ "**BOTnen**" + ", a Discord Bot created by Hans Botnen\nFor a list of my functions, type .botnen")
 
 
+
+
+
 @bot.command()
-async def fuckyou(ctx):
-    await ctx.reply("Fuck you too, human!")
+async def add(ctx, num1, num2):
+    await ctx.reply(float(num1)+float(num2))
 
 
 @bot.command()
@@ -41,7 +81,8 @@ async def dice(ctx, dice):
     terning = randint(1, int(dice))
     await ctx.reply(str(terning))
 
-	
+
+
 @bot.command()
 async def teams(ctx, *names: str):
     navn = []
@@ -80,10 +121,7 @@ async def flip(ctx):
     else:
         await ctx.reply("Tails!")
 
-"""
-This one does not allow you to play leauge, EVER! 
-You´re Welcome
-"""
+
 @bot.command(description='For when you wanna settle the score some other way')
 async def choose(ctx, *choices: str):
     """Chooses between multiple choices."""
@@ -95,7 +133,7 @@ async def choose(ctx, *choices: str):
 
     rnd.shuffle(liste)
     
-    await ctx.send("Dere skal spille"+" "+str(liste[0]))
+    await ctx.send("Jeg velger..."+" "+str(liste[0]))
 
 
 @bot.command(name="ping")
@@ -105,5 +143,5 @@ async def some_crazy_function_name(ctx):
 
 
 keep_alive()
-tOken = os.environ.get("HemmeligKODE")
+tOken = os.environ.get("insert discordBOT token")
 bot.run(tOken)
