@@ -1,0 +1,55 @@
+user : Botnen#9865
+said : Sivert er en bish
+in channel : general
+message ID : 1067516510458880080
+
+user : Botnen#9865
+said : roll
+in channel : general
+message ID : 1067516607456366643
+
+user : Botnen#9865
+said : ?roll
+in channel : general
+message ID : 1067516629191237723
+
+user : Botnen#9865
+said : hello
+in channel : neineieni
+message ID : 1067573321811628126
+
+user : Botnen#9865
+said : roll
+in channel : neineieni
+message ID : 1067573385481170994
+
+user : Botnen#9865
+said : ?hello
+in channel : neineieni
+message ID : 1067573478984781865
+
+user : Botnen#9865
+said : Caroline er en tulling
+in channel : neineieni
+message ID : 1067573537289805864
+
+user : Botnen#9865
+said : wqe
+in channel : general
+message ID : 1067798239144841258
+
+user : Botnen#9865
+said : hei
+in channel : general
+message ID : 1067798468833312828
+
+user : Botnen#9865
+said : hei
+in channel : general
+message ID : 1067798570515845201
+
+-1user : Botnen#9865
+said : BRICKtest
+in channel : general
+message ID : 1067798761331507240
+
